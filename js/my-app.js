@@ -245,7 +245,34 @@ return false;
 		
 		
 		$('#subbutton').click (function() {
-			alert("work");
+			
+			//alert("work");
+			
+var cname = $( "#cname").val();
+var cemail = $( "#cemail").val();
+var mmsg = $( "#mmsg").val();
+
+
+			if (cname ==""){
+	alert("Kindly enter your name");
+	$('#cname').focus();
+	return false;
+}
+
+else if 	(cemail == ""){
+	alert("Kindly enter your email");
+	$('#cemail').focus();
+	return false;
+	
+}
+
+else if 	(mmsg == ""){
+	alert("Kindly enter your Message");
+	$('#mmsg').focus();
+	return false;
+	
+}
+			//
 //var contactname = $( "#ContactName").val();
 //var contactemail = $( "#ContactEmail").val();
 //var contactmessage = $( "#ContactComment").val();
