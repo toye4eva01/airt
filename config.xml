@@ -30,9 +30,9 @@
     <!-- Core plugins -->
     
     
-    <gap:plugin name="org.apache.cordova.dialogs" source="npm" />
+    <!--<gap:plugin name="org.apache.cordova.dialogs" source="npm" />
     <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
-    <!--<gap:plugin name="org.apache.cordova.splashscreen" source="npm" /> -->
+    <gap:plugin name="org.apache.cordova.splashscreen" source="npm" /> -->
  
 
    
@@ -68,7 +68,7 @@
 
     <access origin="*"/>
 
-	<access origin="http://www.rewardsboxnigeria.com/airtelcustomer/mobi*"/>
+	<access origin="127.0.0.1*"/>
    
 
 
