@@ -34,12 +34,12 @@ $(document).on('pageInit', function (e) {
 	/*$('.page-content').load('offerslides.php', function() {*/
 	$(".swipebox").swipebox();
 	/*});*/
-	$('#notpage').load('http://www.Rewardsboxnigeria.com/airtelcustomer/mobi/notification.php');
-	$('#offerpage').load('http://www.Rewardsboxnigeria.com/airtelcustomer/mobi/promo.php');
-	$('#voucherpage').load('http://www.Rewardsboxnigeria.com/airtelcustomer/mobi/voucher.php');
-	$('#tranpage').load('http://www.Rewardsboxnigeria.com/airtelcustomer/mobi/transaction.php');
-	$('#pointslistpage').load('http://www.Rewardsboxnigeria.com/airtelcustomer/mobi/pointstat.php');
-	$('#showprofile').load('http://www.Rewardsboxnigeria.com/airtelcustomer/mobi/profile.php');
+	$('#notpage').load('http://rewardsboxnigeria.com/airtelcustomer/mobi/notification.php');
+	$('#offerpage').load('http://rewardsboxnigeria.com/airtelcustomer/mobi/promo.php');
+	$('#voucherpage').load('http://rewardsboxnigeria.com/airtelcustomer/mobi/voucher.php');
+	$('#tranpage').load('http://rewardsboxnigeria.com/airtelcustomer/mobi/transaction.php');
+	$('#pointslistpage').load('http://rewardsboxnigeria.com/airtelcustomer/mobi/pointstat.php');
+	$('#showprofile').load('http://rewardsboxnigeria.com/airtelcustomer/mobi/profile.php');
 	
 	$('#mainpage').click (function(){
 	window.location.replace('main.html');
@@ -71,7 +71,7 @@ else {
 	
 	$.ajax({
 									type: "POST",
-									url: "editprofile.php",
+									url: "http://rewardsboxnigeria.com/airtelcustomer/mobi/editprofile.php",
 									data: {fname:fname, mname:mname, lname:lname, addy:addy, memberid:memberid},
 																		
 									success: function(msg){
@@ -97,7 +97,7 @@ return false;
 		
 		$.ajax({
 									type: "GET",
-									url: "http://www.Rewardsboxnigeria.com/airtelcustomer/mobi/merchantoffers.php",
+									url: "http://rewardsboxnigeria.com/airtelcustomer/mobi/merchantoffers.php",
 									data: {id:id},
 																		
 									success: function(msg){
@@ -174,7 +174,7 @@ if ($('#loading_image').length == 0) { //is the image on the form yet?
     $('.validatebtn').hide(); // disable double submits
 		$.ajax({
 											type: "POST",
-											url: "http://www.Rewardsboxnigeria.com/airtelcustomer/mobi/chpscript.php",
+											url: "http://rewardsboxnigeria.com/airtelcustomer/mobi/chpscript.php",
 											data: {npassword: npassword, opassword:opassword},
 											
 											
@@ -213,7 +213,7 @@ var storeid = $(this).attr('id');
 //alert(storeid);
 $.ajax({
 									type: "POST",
-									url: "http://www.Rewardsboxnigeria.com/airtelcustomer/mobi/genvoucher.php",
+									url: "http://rewardsboxnigeria.com/airtelcustomer/mobi/genvoucher.php",
 									data: {storeid:storeid},
 																		
 									success: function(msg){
@@ -222,7 +222,7 @@ $.ajax({
 									} else {
 										if(msg ==1001) {
 											alert("Voucher Generated Successfully");
-											$('#showpoints').load('showpoints.php');
+											$('#showpoints').load('http://rewardsboxnigeria.com/airtelcustomer/mobi/showpoints.php');
 										}
 										else if (msg == 2003){
 										alert("You have a valid voucher for this store");
@@ -252,7 +252,7 @@ return false;
 //alert(storeid);
 $.ajax({
 									type: "POST",
-									url: "http://www.Rewardsboxnigeria.com/airtelcustomer/mobi/send.php",
+									url: "http://rewardsboxnigeria.com/airtelcustomer/mobi/send.php",
 									data: $("#contact").serialize(),
 									//data: {contactname:ContactName, contactemail:ContactEmail, contactmessage:ContactComment},
 																		
