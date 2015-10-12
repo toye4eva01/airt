@@ -67,7 +67,11 @@
   
 
     <access origin="*"/>
+<<<<<<< HEAD
 	<!--<access origin="http://www.rewardsboxnigeria.com/airtelcustomer/mobi*"/>-->
    
+=======
+ 
+>>>>>>> origin/master
 
 </widget>
