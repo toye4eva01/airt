@@ -32,7 +32,7 @@
     
     <gap:plugin name="org.apache.cordova.dialogs" source="npm" />
     <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
-    <gap:plugin name="org.apache.cordova.splashscreen" source="npm" />
+    <!--<gap:plugin name="org.apache.cordova.splashscreen" source="npm" /> -->
  
 
    
