@@ -67,7 +67,6 @@
   
 
     <access origin="*"/>
-	<access origin="http://www.rewardsboxnigeria.com/airtelcustomer/mobi*"/>
  
 
 </widget>
