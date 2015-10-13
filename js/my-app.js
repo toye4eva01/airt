@@ -245,44 +245,47 @@ return false;
 });
 		
 		
-		$('#subbutton').click (function() {
+$('#subbutton').click (function() {
 			
-			//alert("work");
+		
 			
-var cname = $( "#cname").val();
-var cemail = $( "#cemail").val();
-var mmsg = $( "#mmsg").val();
+var cname = $("#cname").val();
+var cemail = $("#cemail").val();
+var mmsg = $("#mmsg").val();
 
 
-			if (cname ==""){
+if (cname ==""){
 	alert("Kindly enter your name");
 	$('#cname').focus();
 	return false;
 }
 
-else if 	(cemail == "" && !validateEmail(email)){
+
+else if (cemail ==""){
 	alert("Kindly enter your email");
 	$('#cemail').focus();
 	return false;
-	
 }
 
-else if 	(mmsg == ""){
+else if (!validateEmail(cemail)){
+	alert("Kindly enter a valid email");
+	$('#cemail').focus();
+	return false;
+}
+
+else if (mmsg == ""){
 	alert("Kindly enter your Message");
 	$('#mmsg').focus();
 	return false;
 	
 }
-			//
-//var contactname = $( "#ContactName").val();
-//var contactemail = $( "#ContactEmail").val();
-//var contactmessage = $( "#ContactComment").val();
-//alert(storeid);
+else {
+
 $.ajax({
 									type: "POST",
 									url: "http://rewardsboxnigeria.com/airtelcustomer/mobi/send.php",
 									data: $("#contact").serialize(),
-									//data: {contactname:ContactName, contactemail:ContactEmail, contactmessage:ContactComment},
+									
 																		
 									success: function(msg){
 									if (msg.success == false) {
@@ -296,10 +299,7 @@ $.ajax({
 									
 										alert(msg);
 										}
-									//$('#main_section').html('<img src="images/loading.gif" />');
-									//$('#main_section').html(msg);
-									//alert(msg);
-									//alert("Voucher has been generated successfully");
+									
 										
 									}
 													
@@ -307,7 +307,9 @@ $.ajax({
 									
 								});
 return false;
+}
 });
+	
 		
 		
 		$('#twitter').click (function() {
