@@ -40,7 +40,8 @@ $(document).on('pageInit', function (e) {
 	$('#tranpage').load('http://rewardsboxnigeria.com/airtelcustomer/mobi/transaction.php');
 	$('#pointslistpage').load('http://rewardsboxnigeria.com/airtelcustomer/mobi/pointstat.php');
 	$('#showprofile').load('http://rewardsboxnigeria.com/airtelcustomer/mobi/profile.php');
-	
+	$('#logout').load('http://rewardsboxnigeria.com/airtelcustomer/mobi/logout3.php');
+	window.location.replace('main.html');
 	$('#mainpage').click (function(){
 	window.location.replace('main.html');
 	});
@@ -259,7 +260,7 @@ var mmsg = $( "#mmsg").val();
 	return false;
 }
 
-else if 	(cemail == ""){
+else if 	(cemail == "" && !validateEmail(email)){
 	alert("Kindly enter your email");
 	$('#cemail').focus();
 	return false;
