@@ -292,7 +292,9 @@ $.ajax({
 									$("#warn").html("There was an error submitting the form. Please try again.");
 									} else {
 										alert(msg);
-									
+										$('#cname').val("");
+									    $('#cemail').val("");
+										$('#mmsg').val("");
 									}
 													
 									}
